@@ -1,14 +1,16 @@
 #!/usr/bin/env python
-tablero = [[_,_,_,_,_,_,_,_,_, 0],[_,_,_,_,_,_,_,_,_, 1],[_,_,_,_,_,_,_,_,_,],[_,_,_,_,_,_,_,_,_,],[_,_,_,_,_,_,_,_,_,],[_,_,_,_,_,_,_,_,_,]]
+import sys
 
-def mostrarTablero(tablero):
-	tc = range(9)
-	tf = range(6)
+tablero = [["_","_","_","_","_","_","_","_","_"],["_","_","_","_","_","_","_","_","_"],["_","_","_","_","_","_","_","_","_"],["_","_","_","_","_","_","_","_","_"],["_","_","_","_","_","_","_","_","_"],["_","_","_","_","_","_","_","_","_"]]
+def mostrar(tablero):
+	tc = range(6)
+	tf = range(9)
 	for i in tc:
 		for j in tf:
 			sys.stdout.write('|')
-			sys.stdout.write tablero[i][j]
-	sys.stdout.write('|') + str(j)
-	print""
-
-
+			sys.stdout.write(tablero[i][j])
+		sys.stdout.write('|')
+		print("")
+	sys.stdout.write('|')
+	
+mostrar(tablero)
