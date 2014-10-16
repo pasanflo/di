@@ -11,6 +11,16 @@ def mostrar(tablero):
 			sys.stdout.write(tablero[i][j])
 		sys.stdout.write('|')
 		print("")
-	
-	
 mostrar(tablero)
+j = ' '
+while j<> '#' and j<> '@':
+	print("Elige una ficha: ");
+	j= input()
+if j== '#':
+	maquina='#'	
+	jugador='@'
+	turno='h'
+else:
+	jugador='#'
+	maquina='@'
+print("Has elegido "+ jugador)
