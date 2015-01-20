@@ -13,6 +13,7 @@ tablero = [["_","_","_","_","_","_","_","_","_"],["_","_","_","_","_","_","_","_
 
 jugador = ""
 maquina = ""
+turno = ""
 
 def mostrar(tablero): #Función para mostrar el tablero
 	print("--CUATRO EN RAYA--")
@@ -27,7 +28,7 @@ def mostrar(tablero): #Función para mostrar el tablero
 def elige(): #Función para elegir ficha del jugador
 	global jugador, maquina, turno
 	while jugador<>'O' and jugador<>'X':
-		jugador =raw_input("Elige una ficha(O/X): ")
+		jugador = str.upper(raw_input("Elige una ficha(O/X): "))
 	if jugador == 'O':
 		maquina='X'
 		
@@ -36,6 +37,8 @@ def elige(): #Función para elegir ficha del jugador
 
 	print("Has elegido "+ jugador)
 def tiradaHumano(): #Función para tirada del jugador
+	global turno	
+	turno='H'
 	columna = 10
 	fila = 0
 	while columna not in [0,1,2,3,4,5,6,7,8]:
@@ -45,7 +48,7 @@ def tiradaHumano(): #Función para tirada del jugador
 			tablero[fila][columna] = jugador
 			clear()
 			mostrar(tablero)
-			comprueba(fila, columna)
+			comprueba(fila, columna, turno)
 			return;
 		fila=fila-1
 		if fila<0:
@@ -53,21 +56,31 @@ def tiradaHumano(): #Función para tirada del jugador
 			tiradaHumano()
 
 def tiradaMaquina(): #Función para tirada de la máquina.
+	global turno
+	turno='M'
 	fila = 0
-	columna = randint(0,8)	
+	columna = randint(0,8)
 	for fila in [5,4,3,2,1,0]:
 		if tablero[fila][columna]=="_":
 			tablero[fila][columna] = maquina
 			clear()
 			mostrar(tablero)
-			comprueba(fila, columna)
+			comprueba(fila, columna, turno)
 			return;
 		fila=fila-1
 		if fila =='-1':
 			tiradaMaquina()
 
-def comprueba(fila, columna):
-	global jugador, maquina
+#def comprueba(fila, columna, turno):
+#	cuatro = [turno, turno, turno, turno]
+#	cuatroRaya = ''.join(cuatro)
+#	j = 0
+#	for row in tablero:
+#		array = ''.join(row)
+#		if cuatroRaya in array:
+#			print("Han ganado ", turno)
+#		j = j+1
+		
 
 def juego():
 	clear()
