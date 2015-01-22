@@ -1,0 +1,60 @@
+html, body { 
+  background-image: url("images/fondo.png");
+  color: black;
+  font-family: Sans-Serif;
+}
+
+h1 { 
+  background-color: #466EFF;
+  color: white; 
+  padding: 20px;
+  display: inline-block;
+  border-radius: 20px;
+}
+
+div#menu { 
+  background-color: #DCE5FF;
+  padding: 10px;
+  border-radius: 20px;
+  width: 760px;
+}
+
+div#menu ul { 
+  list-style-type: none;
+  margin: 0 5px; 
+  padding: 5px; 
+}
+
+div#menu li { 
+  display: inline; 
+  padding: 0 15px;
+}
+
+div#menu a { 
+  color: black;
+  font-weight: bold;
+}
+
+div#body {
+  padding: 10px; 
+}
+div#cuadro {
+  width: 760px;
+  overflow: auto;
+  height: 300px;
+  background: #FFFFFF;
+  border-style: solid;
+  border-color: #466EFF;
+  padding: 20px;
+}
+
+td, th { 
+  padding-left: 5px; 
+  padding-right: 5px; 
+} 
+p strong#correcto{
+	color: green;
+}
+p strong#error{
+	color: red;
+}
