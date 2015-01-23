@@ -1,7 +1,7 @@
 <?php
 	
 	include "configuracion.php";
-	cabecera("Búsqueda");
+	cabecera("Añadir registro");
 ?>
 <form method="get" name="formulario" action="busca.php">
 	<strong>Introduce un término a buscar.</strong></br>

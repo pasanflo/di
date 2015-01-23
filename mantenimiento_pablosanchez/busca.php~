@@ -2,7 +2,7 @@
 	
 	include("configuracion.php");
 	include("conexion.php");
-	cabecera("Búsqueda");
+	cabecera("Busqueda");
 	
 	$nombre = $_REQUEST[nombre];
 	$apellido = $_REQUEST[apellido];

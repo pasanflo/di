@@ -14,7 +14,6 @@
 		print "<p><a href=\"modificar.php\">Pulsa para intentar de nuevo.</a></p>";
 	} else {
 		print "<p><strong id=\"correcto\">Datos modificados</strong></p>";
-		print "<p><a href=\"listar.php\">Pulsa para ver la tabla.</a></p>";
 		
 	}
 	pie();

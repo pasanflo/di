@@ -1,0 +1,24 @@
+<?php
+	
+	include "configuracion.php";
+	include "conexion.php";
+	cabecera("Modificar registro");
+	
+	$id = $_REQUEST[id];
+	$sql="SELECT id, nombre, apellido FROM persona WHERE id='$id'";
+	$result= mysql_query($sql, $conexion);
+	while ($fila = mysql_fetch_array($result)){
+		$id = $fila[0];
+		$nombre = $fila[1];
+		$apellido = $fila[2];
+	}
+?>
+<form method="get" name="formulario" action="modifica.php">
+	Id:<input type="text" value=" <?php echo $id; ?> " name="id" readonly="readonly" size=1></br></br>
+	Nombre:&nbsp;&nbsp;<input type="text" value=" <?php echo $nombre; ?>" name="nombre"></br>
+	Apellidos: <input type="text" value=" <?php echo $apellido; ?>" name="apellido"></br></br>
+	<input type="submit" value="Modificar">
+</form>
+<?php
+	pie();
+?>
