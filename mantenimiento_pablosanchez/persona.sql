@@ -48,6 +48,9 @@ INSERT INTO `persona` (`id`, `nombre`, `apellido`) VALUES
 (7, 'Glen', 'McKenna'),
 (8, 'Jack', 'Daniels'),
 (9, 'John', 'Brugal'),
+(9, 'Neil', 'Armstrong'),
+(9, 'Lance', 'Armstrong'),
+(9, 'Louis', 'Armstrong'),
 (11, 'José', 'Cuervo');
 
 --
